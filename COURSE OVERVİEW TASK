@@ -1,0 +1,44 @@
+TASK 1
+% White zorluk seviyesine sahip Family Fun adlı, w'daki ara noktalara sahip c adında bir kurs tanımladım.
+c = course("Family Fun","White",w)
+
+TASK 2
+% ID stick adını verdiğim nesneyi, 123456 seri numarasıyla tanımlanan bir id'ye sahip olarak oluşturdum.
+id = idstick(123456)
+
+TASK 3
+% Değişkenlerin boyutlarını ve türlerini kontrol etmek için whos komutunu kullandım.
+whos
+
+TASK 4
+% Kimlik nesnesinin özelliklerinin ve yöntemlerinin adlarını görmek için properties ve methods fonksiyonlarını kullandım.
+properties(id)
+methods(id)
+
+TASK 5
+% ID stick kimliğini kullanarak Astrid'i c ile gösteren Family Fun kursuna kaydetmek amacıyla register işlevini kullandım. 
+id = register(id,"Astrid",c)
+
+TASK 6
+% Astrid'in ilk yol noktasındaki 42 numaralı ID stick'ini kontrol etmek amacıyla checkWaypoint fonksiyonunu kullandım.
+id = checkWaypoint (id,42)
+
+TASK 1
+% Yeni bir rota nesnesi oluşturmak için "Insanity" adını, "Red" zorluk seviyesini ve w2 vektöründeki yol noktalarını içeren bir rota belirlemek için waypoints fonksiyonunu kullandım. Oluşturulan bu yeni rotayı, c'nin ikinci öğesi olarak standart indeksleme yöntemiyle sakladım.
+c(2) = course("Insanity","Red", w2)
+
+TASK 2
+% Seri numaraları 123456, 567890 ve 987654 olan ID stick nesnelerini içeren bir dizi oluşturmak için idstick fonksiyonunu kullandım.
+id = idstick([123456, 567890, 987654])
+
+TASK 3
+% c'nin ilk öğesi olarak temsil edilen Family Fun kursuna, dizi kimliğindeki ilk ID stick'i kullanarak 'Astrid'i kaydetmek amacıyla kayıt işlevini kullandım.
+id(1) = register(id(1),"Astrid",c(1))
+
+TASK 4
+% Dizi kimliğindeki ikinci ID stick'i kullanarak, Erik'i Family Fun kursuna kaydetmek amacıyla register fonksiyonunu kullandım. 
+id(2) = register(id(2),"Erik",c(1))
+
+TASK 5
+% Astrid'in ID stick'ini, yani kimliğin ilk öğesini kullanarak, 42 numaralı geçiş noktasında kontrol etmek amacıyla checkWaypoint işlevini kullandım.
+id(1) = checkWaypoint(id(1),42)
